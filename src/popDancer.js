@@ -2,11 +2,18 @@ var PopDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
 
   var oldStep = this.step;
-  // var styleSettings = {
-  //   height: 50px,
-  //   width: 50px,
-  //   background-color: blue
-  // };
+  var newSettings = {
+    'height': '50px',
+    'width': '50px',
+    'background-color': 'blue'
+  };
+  this.$node.css(newSettings);
+
+    var styleSettings = {
+      top: top,
+      left: left
+    };
+
 
   this.step = function() {
     oldStep();
