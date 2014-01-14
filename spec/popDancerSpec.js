@@ -13,6 +13,12 @@ describe("popDancer", function() {
     expect(popDancer.$node).to.be.an.instanceof(jQuery);
   });
 
+  it("popDancer should be blue", function(){
+    expect(popDancer.$node).to.be.an.instanceof(jQuery);
+    console.log(popDancer.$node[0]);
+    expect(popDancer.$node[0].attributes.style.value).to.be.equal("top: 30px; left: 70px; height: 50px; width: 50px; background-color: blue;");
+  });
+
   it("popDancer should have a step function that makes its node slide in/out", function() {
     sinon.spy(popDancer.$node, 'slideToggle');
     popDancer.step();
