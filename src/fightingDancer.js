@@ -6,7 +6,7 @@ var FightingDancer = function(top, left, timeBetweenSteps) {
   var currentSettings = this.$node.css(['height', 'width']);
   var newSettings = {
     'height': '65px',
-    'width':'200px',
+    'width':'100px',
     'top':'+=50',
     'left':'-=30',
 
@@ -26,8 +26,18 @@ var FightingDancer = function(top, left, timeBetweenSteps) {
       this.$node.animate(currentSettings, 1000, function() {});
       status = true;
     }
-
   };
+
+  this.lineUp = function() {
+    var newSettings = {
+      'left': '0',
+      'height': '20',
+      'opacity': '0.5'
+    };
+    this.$node.animate(newSettings, 2000, function() {});
+  };
+
+
 };
 
 FightingDancer.prototype = Object.create(Dancer.prototype);

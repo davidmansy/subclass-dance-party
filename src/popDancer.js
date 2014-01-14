@@ -11,9 +11,16 @@ var PopDancer = function(top, left, timeBetweenSteps) {
 
   this.step = function() {
     oldStep();
-    // this.$node.css(styleSettings);
     this.$node.slideToggle();
   };
+
+  this.lineUp = function() {
+    var leftSettings = {
+      'left': '0'
+    };
+    this.$node.animate(leftSettings, 2000, function() {});
+  };
+
 };
 
 PopDancer.prototype = Object.create(Dancer.prototype);
