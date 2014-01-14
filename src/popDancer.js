@@ -9,12 +9,6 @@ var PopDancer = function(top, left, timeBetweenSteps) {
   };
   this.$node.css(newSettings);
 
-    var styleSettings = {
-      top: top,
-      left: left
-    };
-
-
   this.step = function() {
     oldStep();
     // this.$node.css(styleSettings);
@@ -22,4 +16,4 @@ var PopDancer = function(top, left, timeBetweenSteps) {
   };
 };
 
-PopDancer.Prototype = Object.create(Dancer.prototype);
+PopDancer.prototype = Object.create(Dancer.prototype);
